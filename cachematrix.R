@@ -1,8 +1,11 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This function inverses the matrix.  
+## It uses the caching technique.  If the inverse is already exists, it just return the matrix. 
+## If not it inverses the matrix using solve and return the inverse matrix and stores the matrix in memory.
+## For subsequent method calls, it just returns the cached data.
 
-## Write a short comment describing this function
-
+## This function has a set of get,set and getmatrix,setmatrix methods.   
+## The getters are used to get the values stored using setters.
+## The setter are used to set the values.
 makeCacheMatrix <- function(x = matrix()) {
 
         m <- NULL
@@ -19,7 +22,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function takes makeCacheMatrix as input.  If the matrix is already inversed, then it simply returns the cached data.  
+## If not it uses solve function to inverse the matrix and calls the parent function accordingly to get the input matrix and 
+## store the inverse matrix after.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
